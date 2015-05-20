@@ -93,7 +93,7 @@ function verifyIsNumeric() {
   // console.log(!isNaN(minCustAsStr));
 
 var minCustInput = document.getElementById("MinimumCustomers");
-minCustInput.addEventListener("blur", verifyIsNumeric, false);
+minCustInput.addEventListener("blur", verifyIsNumdsferic, false);
 ;
 //  console.log(isNaN(document.getElementById("MinimumCustomers")).value);
 //  console.log(isFinite(minCustInput));
