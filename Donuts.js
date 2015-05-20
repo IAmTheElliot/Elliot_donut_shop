@@ -60,8 +60,59 @@ for (var z = 0; z < tableLocationArrayData.length; z++) {
   tableLocationArrayData[z].renderRow();
 }
 
-Max = 37
-Min = 8
-var consolemath = Math.floor(Math.random() * (Max - Min + 1)) + Min;
-console.log(consolemath);
+
+
+
+// defines the function of verifying numeric value
+function verifyIsNumeric() {
+  var minCustAsStr = document.getElementById("MinimumCustomers").value;
+  var minCustAsNum = parseInt(minCustAsStr);
+  if (isNaN(minCustAsNum) === "NaN") {
+    console.log("minCustAsNum isNaN = false");
+    window.alert("Your minimum customers must be a number!");
+  }
+  console.log(isNaN(minCustAsNum));
+  console.log(minCustAsStr); // returns 20
+  console.log(minCustAsStr + 1); //returns 201
+  console.log(minCustAsNum); //returns 20
+  console.log(minCustAsNum + 1); //returns 21
+
+/*
+  console.log(isNaN("string")); //true "string is not a number"
+  console.log(isNaN(4)); //false "4 is a number"
+  console.log(!isNaN(4)); //true "4 is not not a number"
+  console.log(isNaN("4")); //false "4 is a number"
+  console.log(minCustAsStr.type);
+  console.log(1 + (parseInt(minCustAsStr),10));
+*/
+  // } else {
+    // prompt("Only enter numbers in Minimum Customers");
+    // document.getElementById("MinimumCustomers").value = ""
+}
+
+  // console.log(!isNaN(minCustAsStr));
+
+var minCustInput = document.getElementById("MinimumCustomers");
+minCustInput.addEventListener("blur", verifyIsNumeric, false);
 ;
+//  console.log(isNaN(document.getElementById("MinimumCustomers")).value);
+//  console.log(isFinite(minCustInput));
+//  console.log(isFinite(0));
+
+// found online
+// function isNumber(n) {
+// console.log(isNaN(parseFloat(minCustAsStr)) && isFinite(minCustAsStr));
+
+
+
+/*
+  var verifyMaxCust = document.getElementById("MaximumCustomers");
+  verifyMinCust.addEventListener("blur",  )
+}
+
+function addLocationArray() {
+  var buttonClick = document.getElementById("addLocationData");
+  buttonClick.addEventListener("onclick", outputToArray, false);
+}
+var outputToArray = blahblahblah
+*/
