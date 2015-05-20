@@ -1,0 +1,62 @@
+/*
+#ADD5F7
+#35478C
+#4E7AC7
+#7FB2F0
+#161938
+*/
+
+body {
+  background-color: #ADD5F7;
+}
+
+label {
+  width: 140px;
+}
+
+h1 {
+  font-family: "Monotype Corsiva", cursive;
+  font-size: 48px;
+  color: #35478C;
+  background-color: #7FB2F0;
+  padding: 20px;
+  border: 2px solid #161938;
+  margin: 0px;
+}
+
+table {
+  margin-top: 20px;
+  border: 2px solid #161938;
+}
+
+td {
+  width: 60px;
+  border-bottom: 1px solid #4E7AC7;
+  text-align: center;
+  background-color: rgb(230,230,240);
+  font-family: "Ubuntu";
+  /*font-weight: 300;*/
+}
+
+.location {
+  width: 150px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
+}
+
+th {
+  background-color: #7FB2F0;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+}
+
+img {
+  position: absolute;
+  opacity: 0.1;
+  top: 200px;
+  left: 175px;
+}

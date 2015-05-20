@@ -16,23 +16,43 @@ update page's DOM with hourly & daily totals
 make it look pretty-->
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Top Pot Donut Shop!! (and coffee)</title>
-</head>
-<body>
-  <section>
-    <h1>Top Pot donut production schedule</h1>
-    <table id="tableA">
-    </table>
-  </section>
-  <section>
-    <p><label>New Location<input type="text" id="NewLocation"></p>
-    <p><label>Min Customers<input type="text" id="MinimumCustomers"></p>
-    <p><label>Max Customers<input type="text" id="MaximumCustomers"></p>
-    <p><label>Average Purchase<input type="text" id="Average Purchased"></p>
-    <p><button name="addLocationData">Click to add location</button></p>
-
-  </sction>
-  <script src="Donuts.js" type="text/javascript"></script>
-</body>
+  <head>
+    <title>Top Pot Donut Shop!! (and coffee)</title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,400italic,500italic' rel='stylesheet' type='text/css'>
+    <link href="styles.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+    <img src="original_smiley_face.png" alt="Smiley Face">
+    <section>
+      <h1>Top Pot donut production schedule</h1>
+      <table id="tableA">
+      </table>
+    </section>
+    <section>
+      <p>
+        <label>New Location
+          <input type="text" id="NewLocation">
+        </label>
+      </p>
+      <p>
+        <label>Min Customers
+          <input type="text" id="MinimumCustomers">
+        </label>
+      </p>
+      <p>
+        <label>Max Customers
+          <input type="text" id="MaximumCustomers">
+        </label>
+        </p>
+      <p>
+        <label>Average Purchase
+          <input type="text" id="Average Purchased">
+        </label>
+      </p>
+      <p>
+        <button name="addLocationData">Click to add location</button>
+      </p>
+    </section>
+    <script src="Donuts.js" type="text/javascript"></script>
+  </body>
 </html>
