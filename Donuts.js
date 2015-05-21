@@ -21,19 +21,15 @@ function DonutStore(location, custMin, custMax, perCust) {
 }
 
 // array data for tableHeadArrayData
-var tableHeadArrayData = ["Location", "7 AM", "8 AM", "9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM", "6 PM", "Total"];
+var tableHeadArrayData = ["Location", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "Total"];
 
 // constructor/call for table Head
-var productionTable = document.getElementById("tableA");
-var headerRow = document.createElement("tr");
-headerRow.setAttribute("class", "header");
-
 for(var h = 0; h < tableHeadArrayData.length; h++){
+  var productionTable = document.getElementById("tableA");
   var createHead = document.createElement("th");
   createHead.textContent = tableHeadArrayData[h];
-  headerRow.appendChild(createHead);
+  productionTable.appendChild(createHead);
 }
-productionTable.appendChild(headerRow);
 
 // constructor/render template for 1 row of DonutStore
 DonutStore.prototype.renderRow = function() {
@@ -44,15 +40,14 @@ DonutStore.prototype.renderRow = function() {
   // creates new table element as "td", sets content to this.location, appends to "tr" above
   var newTd = document.createElement("td");
   newTd.textContent = this.location;
-  newTd.setAttribute("class", "location");
   storeRow.appendChild(newTd);
 
   for(var a = 0; a < tableHeadArrayData.length - 1; a++) {
     newTd = document.createElement("td");
     newTd.textContent = Math.floor(this.donutsPerHour());
     storeRow.appendChild(newTd);
-  }
   var totalProduction = totalProduction + DonutStore.donutsPerHour
+  }
 }
 
 var tableLocationArrayData = [];
@@ -68,56 +63,54 @@ for (var z = 0; z < tableLocationArrayData.length; z++) {
 
 
 
+/*
+// newLocation = []
+// Array.prototype.push.apply(newLocation);
+
+DonutStore.prototype.addNewLocation = function(){}
+
+var buttonClick = document.getElementById("addLocationData");
+buttonClick.addEventListener("click", addNewLocation, false);
+
+var addNewLocation = function(){
+  console.log("button clicked");
+  var location = (document.getElementById("NewLocation").value);
+  var custMin = (document.getElementById("MinimumCustomers").value);
+  var custMax = document.getElementById("MaximumCustomers").value;
+  var perCust = document.getElementById("AveragePerCust").value;
+  console.log(location);
+  console.log(custMin);
+  console.log(custMax);
+  console.log(perCust);
+} */
+
 // defines the function of verifying numeric value
-function verifyIsNumeric() {
+  function verifyIsNumeric(){
+    console.log("isnumeric triggers");
   var minCustAsStr = document.getElementById("MinimumCustomers").value;
   var minCustAsNum = parseInt(minCustAsStr);
-  if (isNaN(minCustAsNum) === "NaN") {
-    console.log("minCustAsNum isNaN = false");
-    window.alert("Your minimum customers must be a number!");
-  }
-  console.log(isNaN(minCustAsNum));
+// var num * 100, parseint, div/100. Do as func, return result
+
+/*  console.log(isNaN(minCustAsNum));
   console.log(minCustAsStr); // returns 20
   console.log(minCustAsStr + 1); //returns 201
   console.log(minCustAsNum); //returns 20
   console.log(minCustAsNum + 1); //returns 21
-
-/*
-  console.log(isNaN("string")); //true "string is not a number"
-  console.log(isNaN(4)); //false "4 is a number"
-  console.log(!isNaN(4)); //true "4 is not not a number"
-  console.log(isNaN("4")); //false "4 is a number"
-  console.log(minCustAsStr.type);
-  console.log(1 + (parseInt(minCustAsStr),10));
-*/
-  // } else {
-    // prompt("Only enter numbers in Minimum Customers");
-    // document.getElementById("MinimumCustomers").value = ""
+  console.log(isNaNHolder);
+  console.log(isNaN(minCustAsNum)); */
+  var isNaNHolder = (isNaN(minCustAsNum));
+  if ((isNaNHolder == true) && (document.getElementById("MinimumCustomers").value != "")) {
+    window.alert("Ensure your minimum customers is a number");
+    document.getElementById("MinimumCustomers").value = "";
+    document.getElementById("MinimumCustomers").focus();
+  } else {
+    console.log(minCustAsNum);
+    console.log(isNaNHolder);
+  }
 }
 
-  // console.log(!isNaN(minCustAsStr));
 
 var minCustInput = document.getElementById("MinimumCustomers");
-minCustInput.addEventListener("blur", verifyIsNumdsferic, false);
-;
-//  console.log(isNaN(document.getElementById("MinimumCustomers")).value);
-//  console.log(isFinite(minCustInput));
-//  console.log(isFinite(0));
+minCustInput.addEventListener("blur", verifyIsNumeric, false);
+console.log(document.getElementById("MinimumCustomers").value);
 
-// found online
-// function isNumber(n) {
-// console.log(isNaN(parseFloat(minCustAsStr)) && isFinite(minCustAsStr));
-
-
-
-/*
-  var verifyMaxCust = document.getElementById("MaximumCustomers");
-  verifyMinCust.addEventListener("blur",  )
-}
-
-function addLocationArray() {
-  var buttonClick = document.getElementById("addLocationData");
-  buttonClick.addEventListener("onclick", outputToArray, false);
-}
-var outputToArray = blahblahblah
-*/
