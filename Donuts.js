@@ -46,8 +46,8 @@ DonutStore.prototype.renderRow = function() {
     newTd = document.createElement("td");
     newTd.textContent = Math.floor(this.donutsPerHour());
     storeRow.appendChild(newTd);
-  }
   var totalProduction = totalProduction + DonutStore.donutsPerHour
+  }
 }
 
 var tableLocationArrayData = [];
@@ -63,56 +63,54 @@ for (var z = 0; z < tableLocationArrayData.length; z++) {
 
 
 
+/*
+// newLocation = []
+// Array.prototype.push.apply(newLocation);
+
+DonutStore.prototype.addNewLocation = function(){}
+
+var buttonClick = document.getElementById("addLocationData");
+buttonClick.addEventListener("click", addNewLocation, false);
+
+var addNewLocation = function(){
+  console.log("button clicked");
+  var location = (document.getElementById("NewLocation").value);
+  var custMin = (document.getElementById("MinimumCustomers").value);
+  var custMax = document.getElementById("MaximumCustomers").value;
+  var perCust = document.getElementById("AveragePerCust").value;
+  console.log(location);
+  console.log(custMin);
+  console.log(custMax);
+  console.log(perCust);
+} */
+
 // defines the function of verifying numeric value
-function verifyIsNumeric() {
+  function verifyIsNumeric(){
+    console.log("isnumeric triggers");
   var minCustAsStr = document.getElementById("MinimumCustomers").value;
   var minCustAsNum = parseInt(minCustAsStr);
-  if (isNaN(minCustAsNum) === "NaN") {
-    console.log("minCustAsNum isNaN = false");
-    window.alert("Your minimum customers must be a number!");
-  }
-  console.log(isNaN(minCustAsNum));
+// var num * 100, parseint, div/100. Do as func, return result
+
+/*  console.log(isNaN(minCustAsNum));
   console.log(minCustAsStr); // returns 20
   console.log(minCustAsStr + 1); //returns 201
   console.log(minCustAsNum); //returns 20
   console.log(minCustAsNum + 1); //returns 21
-
-/*
-  console.log(isNaN("string")); //true "string is not a number"
-  console.log(isNaN(4)); //false "4 is a number"
-  console.log(!isNaN(4)); //true "4 is not not a number"
-  console.log(isNaN("4")); //false "4 is a number"
-  console.log(minCustAsStr.type);
-  console.log(1 + (parseInt(minCustAsStr),10));
-*/
-  // } else {
-    // prompt("Only enter numbers in Minimum Customers");
-    // document.getElementById("MinimumCustomers").value = ""
+  console.log(isNaNHolder);
+  console.log(isNaN(minCustAsNum)); */
+  var isNaNHolder = (isNaN(minCustAsNum));
+  if ((isNaNHolder == true) && (document.getElementById("MinimumCustomers").value != "")) {
+    window.alert("Ensure your minimum customers is a number");
+    document.getElementById("MinimumCustomers").value = "";
+    document.getElementById("MinimumCustomers").focus();
+  } else {
+    console.log(minCustAsNum);
+    console.log(isNaNHolder);
+  }
 }
 
-  // console.log(!isNaN(minCustAsStr));
 
 var minCustInput = document.getElementById("MinimumCustomers");
-minCustInput.addEventListener("blur", verifyIsNumdsferic, false);
-;
-//  console.log(isNaN(document.getElementById("MinimumCustomers")).value);
-//  console.log(isFinite(minCustInput));
-//  console.log(isFinite(0));
+minCustInput.addEventListener("blur", verifyIsNumeric, false);
+console.log(document.getElementById("MinimumCustomers").value);
 
-// found online
-// function isNumber(n) {
-// console.log(isNaN(parseFloat(minCustAsStr)) && isFinite(minCustAsStr));
-
-
-
-/*
-  var verifyMaxCust = document.getElementById("MaximumCustomers");
-  verifyMinCust.addEventListener("blur",  )
-}
-
-function addLocationArray() {
-  var buttonClick = document.getElementById("addLocationData");
-  buttonClick.addEventListener("onclick", outputToArray, false);
-}
-var outputToArray = blahblahblah
-*/
