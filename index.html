@@ -19,40 +19,51 @@ make it look pretty-->
   <head>
     <title>Top Pot Donut Shop!! (and coffee)</title>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,500,400italic,500italic' rel='stylesheet' type='text/css'>
+    <link href="CSSReset.css" type="text/css" rel="stylesheet"/>
     <link href="styles.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
-    <img src="original_smiley_face.png" alt="Smiley Face">
-    <section>
+    <section id="HeadBannerSection">
       <h1>Top Pot donut production schedule</h1>
-      <table id="tableA">
-      </table>
     </section>
-    <section>
-      <p>
-        <label>New Location
-          <input type="text" id="NewLocation" placeholder="Location" required>
-        </label>
-      </p>
-      <p>
-        <label>Min Customers
-          <input type="text" id="MinimumCustomers" placeholder="Minimum customers" required>
-        </label>
-      </p>
-      <p>
-        <label>Max Customers
-          <input type="text" id="MaximumCustomers" placeholder="Maximum customers" required>
-        </label>
-        </p>
-      <p>
-        <label>Average Purchase
-          <input type="text" id="AverageveragePerCust" placeholder="Donuts per customer" required>
-        </label>
-      </p>
-      <p>
-        <button name="addLocationData">Click to add location</button>
-      </p>
-    </section>
+    <section id="TableSection">
+      <table id="tableA"></table>
+
+      <section id="AddWrap">
+        <section id="Add1">
+          <img src="DonutStack2.png" height="275" />
+        </section>
+        <section id="Add2"><h2>Enter parameters for a new location:</h2>
+          <p>
+            <label>New Location
+              <input type="text" id="NewLocation" placeholder="Location" required>
+            </label>
+          </p>
+          <p>
+            <label>Min Customers
+              <input type="text" id="MinimumCustomers" placeholder="Minimum customers" required>
+            </label>
+          </p>
+          <p>
+            <label>Max Customers
+              <input type="text" id="MaximumCustomers" placeholder="Maximum customers" required>
+            </label>
+            </p>
+          <p>
+            <label>Average Purchase
+              <input type="text" id="AverageveragePerCust" placeholder="Donuts per customer" required>
+            </label>
+          </p>
+          <p>
+            <button name="addLocationData">Click to add location</button>
+          </p>
+        </section>
+        <section id="Add3">
+          <img src="Coffee_cup.png" height="275" />
+        </section>
+      </section>
+
+    <footer></footer>
     <script src="Donuts.js" type="text/javascript"></script>
   </body>
 </html>
