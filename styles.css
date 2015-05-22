@@ -5,6 +5,13 @@
 #7FB2F0
 #161938
 */
+.container {
+  position: relative;
+  top: 100px;
+  width: 75%;
+  margin: 0 auto;
+  min-width: 960px;
+}
 
 body {
   background-color: #ADD5F7;
@@ -27,7 +34,7 @@ label {
   position: fixed;
   top: 0px;
   width: 100%;
-  min-width: 750px;
+  min-width: 960px;
   z-index: 100;
 }
 
@@ -49,18 +56,10 @@ h2 {
   text-align: left;
 }
 
-#TableSection {
-  position: relative;
-  top: 100px;
-  border: 2px;
-  width: 1073px;
-}
-
 table {
   border: 2px solid #161938;
-  width: 90%;
-  min-width: 900px;
-  margin: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 td {
@@ -88,46 +87,52 @@ th {
   padding: 10px;
 }
 
+.BoxOutline {
+  border: 2px solid #161938
+}
+
 #AddWrap {
-  position: relative;
-  left: 10px;
-  border: 2px solid #161938;
-  height: 300px;
-  width: 960px;
+  padding: 10px;
 }
 
 #Add1 {
-  border: 2px solid #161938;
   width: 250px;
-  height: 275px;
-  margin: 10px;
   float: left;
+  margin-right: 10px;
 }
 
 #Add2 {
-  border: 2px solid #161938;
-  width: 20em;
-  height: 265px;
-  margin: 10px;
+  width: 344px;
   float: left;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
+  padding: 15px 30px; /* 15px 30px top right bottom left TRBL*/
 }
 
 #Add3 {
-  border: 2px solid #161938;
   width: 250px;
-  height: 275px;
-  margin: 10px;
   float: right;
 }
 
-
-/*img {
-  position: absolute;
-  opacity: 0.1;
-  top: 200px;
-  left: 175px;
+button {
+  width: 150px;
+  font-family: "Ubuntu";
+  position: center;
+  display: inline-block;
 }
-*/
+
+img[src="DonutStack2.png"] {
+  width: 250px;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
