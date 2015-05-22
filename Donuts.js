@@ -24,12 +24,16 @@ function DonutStore(location, custMin, custMax, perCust) {
 var tableHeadArrayData = ["Location", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "Total"];
 
 // constructor/call for table Head
-for(var h = 0; h < tableHeadArrayData.length; h++){
   var productionTable = document.getElementById("tableA");
+  var headerRow = document.createElement("tr");
+  headerRow.setAttribute("class", "header");
+
+for(var h = 0; h < tableHeadArrayData.length; h++){
   var createHead = document.createElement("th");
   createHead.textContent = tableHeadArrayData[h];
-  productionTable.appendChild(createHead);
+  headerRow.appendChild(createHead);
 }
+productionTable.appendChild(headerRow);
 
 // constructor/render template for 1 row of DonutStore
 DonutStore.prototype.renderRow = function() {
@@ -40,6 +44,7 @@ DonutStore.prototype.renderRow = function() {
   // creates new table element as "td", sets content to this.location, appends to "tr" above
   var newTd = document.createElement("td");
   newTd.textContent = this.location;
+  newTd.setAttribute("class","location");
   storeRow.appendChild(newTd);
 
   for(var a = 0; a < tableHeadArrayData.length - 1; a++) {

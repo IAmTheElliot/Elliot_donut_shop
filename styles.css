@@ -8,10 +8,27 @@
 
 body {
   background-color: #ADD5F7;
+  background-image: url(original_smiley_face.png);
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+}
+
+img.center {
+  display: block;
+  margin-left: 0 auto;
+  margin-right: 0 auto;
 }
 
 label {
   width: 140px;
+}
+
+#HeadBannerSection{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  min-width: 750px;
+  z-index: 100;
 }
 
 h1 {
@@ -19,14 +36,31 @@ h1 {
   font-size: 48px;
   color: #35478C;
   background-color: #7FB2F0;
-  padding: 20px;
+  padding: 25px;
   border: 2px solid #161938;
-  margin: 0px;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Monotype Corsiva", cursive;
+  font-size: 18px;
+  color: #35478C;
+  padding: 10px;
+  text-align: left;
+}
+
+#TableSection {
+  position: relative;
+  top: 100px;
+  border: 2px;
+  width: 1073px;
 }
 
 table {
-  margin-top: 20px;
   border: 2px solid #161938;
+  width: 90%;
+  min-width: 900px;
+  margin: 10px;
 }
 
 td {
@@ -54,9 +88,46 @@ th {
   padding: 10px;
 }
 
-img {
+#AddWrap {
+  position: relative;
+  left: 10px;
+  border: 2px solid #161938;
+  height: 300px;
+  width: 960px;
+}
+
+#Add1 {
+  border: 2px solid #161938;
+  width: 250px;
+  height: 275px;
+  margin: 10px;
+  float: left;
+}
+
+#Add2 {
+  border: 2px solid #161938;
+  width: 20em;
+  height: 265px;
+  margin: 10px;
+  float: left;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+#Add3 {
+  border: 2px solid #161938;
+  width: 250px;
+  height: 275px;
+  margin: 10px;
+  float: right;
+}
+
+
+/*img {
   position: absolute;
   opacity: 0.1;
   top: 200px;
   left: 175px;
 }
+*/
