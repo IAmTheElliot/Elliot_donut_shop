@@ -113,10 +113,20 @@ th {
 }
 
 button {
+
   width: 150px;
   font-family: "Ubuntu";
   position: center;
   display: inline-block;
+  box-shadow: 3px 3px;
+  border-radius: 3px;
+  outline: 0;
+  border: none;
+  transition: all 0.1s linear;
+}
+button:active {
+  box-shadow: 1px 1px;
+  transform: translateY(5px);
 }
 
 img[src="DonutStack2.png"] {
